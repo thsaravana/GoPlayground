@@ -66,4 +66,21 @@ func main() {
 	for index := 0; index < len(slice13); index++ {
 		fmt.Println(slice13[index])
 	}
+
+	// Multidimensional slices
+	fmt.Println("Multidimensional slices")
+	slice14 := [][]int {{1}, {1,2}}
+	fmt.Println(slice14)
+	slice14[0] = append(slice14[0], 2)
+	fmt.Println(slice14)
+
+	slice15 := []int {1,2,3,4,5}
+	passByValue(slice15)
+	fmt.Println(slice15)
+
+}
+
+func passByValue(slice []int) {
+	slice[0] = 0
+	fmt.Println(slice)
 }
