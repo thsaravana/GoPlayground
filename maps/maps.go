@@ -32,4 +32,22 @@ func main() {
 	} else {
 		fmt.Println("Nothing to see here")
 	}
+
+	// Iterating maps
+	fmt.Println("Interating maps")
+	map4 := map[int] string {0 : "null", 1 : "eins", 2: "zwei", 3 : "drei", 4 : "fear"}
+	for key, value := range map4 {
+		fmt.Printf("%d is %s\n", key, value)
+	}
+
+	delete(map4, 4)
+	iterate(map4)
+	fmt.Println(map4)
+}
+
+func iterate(dictionary map[int] string) {
+	fmt.Println("Iterating...")
+	for key, value := range dictionary {
+		fmt.Printf("%d is %s\n", key, value)
+	}
 }
