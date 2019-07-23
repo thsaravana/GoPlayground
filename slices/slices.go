@@ -42,6 +42,7 @@ func main() {
 	fmt.Println(slice6)
 
 	// Appending slices
+	fmt.Println("Appending slices")
 	slice7 := []int {1,2,3,4,5}
 	slice8 := append(slice7, 6)
 	fmt.Println(slice8)
@@ -54,4 +55,15 @@ func main() {
 	slice12 := append(slice10, slice11...)
 	fmt.Println(slice12)
 
+
+	// Iterating over slices
+	slice13 := []int {1,2,3,4,5}
+	
+	for index, value := range slice13 {
+		fmt.Printf("Index: %d  Value: %d\n", index, value)
+	}
+
+	for index := 0; index < len(slice13); index++ {
+		fmt.Println(slice13[index])
+	}
 }
