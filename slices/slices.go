@@ -30,4 +30,28 @@ func main() {
 
 	emptySlice2 := []int {}
 	fmt.Println(emptySlice2)
+
+
+	// Using slices
+	fmt.Println("Using slices")
+	slice5 := []int {1,2,3,4,5}
+	slice5[0] = -1
+	fmt.Println(slice5)
+
+	slice6 := slice5[1:3]
+	fmt.Println(slice6)
+
+	// Appending slices
+	slice7 := []int {1,2,3,4,5}
+	slice8 := append(slice7, 6)
+	fmt.Println(slice8)
+
+	slice9 := []int {1,2}
+	slice10 := append(slice9, 3, 4, 5)
+	fmt.Println(slice10)
+
+	slice11 := []int {6,7,8}
+	slice12 := append(slice10, slice11...)
+	fmt.Println(slice12)
+
 }
